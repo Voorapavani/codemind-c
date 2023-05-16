@@ -1,18 +1,11 @@
 #include<stdio.h>
 int main()
 {
-    int n,r,s=0,j;
+    int n;
     scanf("%d",&n);
-    while(n>0)
-    {
-        r=n%10;
-        s=s+r;
-        n=n/10;
-        if(n==0&&s>=10)
-        {
-            n=s;
-            s=0;
-        }
-    }
-    printf("%d",s);
+    if(n<=9)
+    printf("%d",n);
+    else if(n%9==0)
+    printf("9");
+    else printf("%d",n%9);
 }
